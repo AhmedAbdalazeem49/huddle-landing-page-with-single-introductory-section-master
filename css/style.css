@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --open-sans: 'Open Sans', sans-serif;
+  --poppins: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--violet);
+  background-image: url(../images/bg-desktop.svg);
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  width: 90%;
+  margin: 5px auto;
+  padding: 20px;
+}
+
+main header {
+  width: 100%;
+}
+
+main header img {
+  width: 150px;
+}
+
+main section {
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-between;
+}
+
+main section .image {
+  width: 50%;
+  margin-right: 20px;
+}
+
+main section .image img {
+  width: 100%;
+}
+
+main section .text {
+  width: 50%;
+  padding: 40px;
+  color: #fff;
+}
+
+.text h3 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.4;
+  font-family: var(--open-sans);
+  margin-bottom: 20px;
+}
+
+.text p {
+  line-height: 22px;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: var(--violet);
+  font-size: 16px;
+  padding: 12px 45px;
+  border-radius: 20px;
+  box-shadow: 0 0 1px #00000072;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: #fff;
+}
+
+div.icons {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  display: flex;
+  gap: 13px;
+}
+
+.icons .icon {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  border-color: var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+@media only screen and (max-width:670px) {
+  body {
+    background-image: url(../images/bg-mobile.svg);
+  }
+  main section {
+    flex-direction: column;
+  }
+
+  main section .image {
+    width: 100%;
+  }
+
+  main section .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  div.icons {
+    position: absolute;
+    bottom: -150px;
+    right: 250px;
+  }
+}
